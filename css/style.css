@@ -141,12 +141,16 @@ img{
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 2rem;
+    border: none;
 }
 @media (min-width: 768px) {
      .boton {
         /* display: inline; no le puedes poner width ni margin no lo respetan */
         display: inline-block;/*Respeta el width y el margin*/
      }
+}
+.boton:hover {
+    cursor: pointer;
 }
 .boton--primario {
     background-color: var(--negro);
@@ -229,3 +233,28 @@ img{
     background-size: cover;/* que utilice todo el tamaño disponible*/
     background-repeat: no-repeat;/* que no se repita */
 }
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+.campo__label {
+    flex: 0 0 9rem;/* 0 factor de crecimiento no crece, 0 factor de encogimiento no encoge, 9rem su width*/
+    text-align: right;
+    
+}                       
+.campo__field {
+    flex: 1;/* factor de crecimiento de 1 de los fields/areas, como el label tiene un factor de 0 ocupa todo el espacio restante */
+    border: 1px solid var(--gris);
+}
+.campo__field--textarea {
+    height: 20rem;
+}
+
